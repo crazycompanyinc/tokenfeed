@@ -154,9 +154,9 @@ export default function Home() {
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">Start free. Scale when you need to.</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Starter', price: 'Free', period: '', features: ['10K requests/mo', '1 seat', '1 organization', '7-day data retention', 'Community support'], cta: 'Get Started', highlight: false },
-              { name: 'Team', price: '$29', period: '/mo', features: ['Unlimited requests', '5 seats included', '3 organizations', '30-day retention', 'Alerts & reports', 'Slack integration'], cta: 'Start Free Trial', highlight: true },
-              { name: 'Organization', price: '$79', period: '/mo', features: ['Everything in Team', 'Unlimited seats', 'Unlimited orgs', 'Forever retention', 'Git cost allocation', 'Dedicated support'], cta: 'Start Free Trial', highlight: false },
+              { name: 'Starter', price: 'Free', period: '', features: ['10K requests/mo', '1 seat', '1 organization', '7-day data retention', 'Community support'], cta: 'Get Started', highlight: false, url: 'https://github.com/crazycompanyinc/tokenfeed' },
+              { name: 'Team', price: '$29', period: '/mo', features: ['Unlimited requests', '5 seats included', '3 organizations', '30-day retention', 'Alerts & reports', 'Slack integration'], cta: 'Start Free Trial', highlight: true, url: 'https://buy.stripe.com/cNi8wO86Cbpe5Sa5ZYgA80h' },
+              { name: 'Organization', price: '$79', period: '/mo', features: ['Everything in Team', 'Unlimited seats', 'Unlimited orgs', 'Forever retention', 'Git cost allocation', 'Dedicated support'], cta: 'Start Free Trial', highlight: false, url: 'https://buy.stripe.com/aFa8wO4Uqala4O62NMgA80i' },
             ].map((p) => (
               <div key={p.name} className={`p-6 rounded-2xl border ${p.highlight ? 'bg-gradient-to-b from-violet-500/10 to-cyan-500/5 border-violet-500/30 ring-1 ring-violet-500/20' : 'bg-white/[0.03] border-white/[0.06]'}`}>
                 {p.highlight && <span className="text-xs font-medium text-violet-400 bg-violet-500/10 px-2 py-1 rounded-full">POPULAR</span>}
@@ -172,9 +172,9 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-2.5 rounded-xl text-sm font-medium transition ${p.highlight ? 'bg-gradient-to-r from-violet-600 to-cyan-500 hover:opacity-90' : 'bg-white/5 border border-white/10 hover:bg-white/10'}`}>
+                <a href="https://buy.stripe.com/cNi8wO86Cbpe5Sa5ZYgA80h" className={`w-full block text-center py-2.5 rounded-xl text-sm font-medium transition ${p.highlight ? 'bg-gradient-to-r from-violet-600 to-cyan-500 hover:opacity-90' : 'bg-white/5 border border-white/10 hover:bg-white/10'}`}>
                   {p.cta}
-                </button>
+                </a>
               </div>
             ))}
           </div>
